@@ -1,0 +1,122 @@
+<div cols="2" class="calculator">
+  <span class="calculator-main">
+    <mat-grid-list cols="4">
+      <mat-grid-tile colspan="3">
+        <form class="current-calculation">
+          <mat-form-field class="current-calculation-full">
+            <input type="text" matInput disabled value="{{ currentCalculation }}" />
+          </mat-form-field>
+        </form>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="warn" (click)="backspace()">
+          ⌫
+        </button>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('1')">
+          1
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('2')">
+          2
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('3')">
+          3
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="accent" (click)="addToOperators('/')">
+          /
+        </button>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('4')">
+          4
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('5')">
+          5
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('6')">
+          6
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="accent" (click)="addToOperators('x')">
+          X
+        </button>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('7')">
+          7
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('8')">
+          8
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('9')">
+          9
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="accent" (click)="addToOperators('-')">
+          -
+        </button>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <button type="button" mat-fab color="warn" (click)="clear()">C</button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="addToNumbers('0')">
+          0
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="primary" (click)="handleDot()">
+          .
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button type="button" mat-fab color="accent" (click)="addToOperators('+')">
+          +
+        </button>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="4">
+        <button type="button" mat-raised-button color="accent" [disabled]="disableCalculateButton()" (click)="calculate()">
+          =
+        </button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </span>
+  <div class="calculator-history">
+    <mat-list>
+      <mat-list-item>
+        <button type="button" mat-raised-button color="primary" (click)="clearHistory()" [disabled]="disableHistoryButton">
+          Clear History
+        </button>
+      </mat-list-item>
+      <mat-list-item *ngFor="let calculation of history">
+        <span matListItemTitle>
+          {{ calculation.calculation }}
+          </span>
+          <span matListItemLine>
+            {{ calculation.answer }}
+            </span>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

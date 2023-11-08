@@ -1,0 +1,39 @@
+.calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-direction: row;
+
+    .calculator-main {
+        margin-top: 2em;
+        width: 90%;
+        border: 0.5em solid #ccc;
+        border-radius: 1em;
+
+        .current-calculation {
+            margin-top: 2em;
+            width: 90%;
+        }
+
+        .current-calculation-full {
+            width: 100%;
+        }
+
+        .equal-button {
+            width: 90%;
+        }
+    }
+
+    .calculator-history {
+        margin-top: 2em;
+        width: 90%;
+        border: 0.5em solid #ccc;
+        border-radius: 1em;
+    }
+}
