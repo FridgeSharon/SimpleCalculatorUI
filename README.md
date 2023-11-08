@@ -1,27 +1,26 @@
-# SimpleCalculatorUI
+# SimpleCalculatorUI by Guy Sharon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+This project goes in tandem with the `SOLIDCalculator` microservice.
+Can also work with the lite version of the microservice, `SimpleCalculator`.
 
-## Development server
+## Run the code
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng serve` in the terminal.  
+Navigate to `http://localhost:4200/`.  
+The application will automatically reload if you change any of the source files.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test`.
 
-## Running end-to-end tests
+## Notes
+Input is only possible through the buttons.  
+History is saved in the App, not in the microservice, this was to simplify the project and thinking of actual usage for a calculator.  
+The calculate(`=`) button is disabled until a valid calculation is possible.  
+This is a relatively complex solution to an otherwise simple problem.  
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Possible upgrades
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Instead of using a string, this could have been done with a stack.
+- The history could have been saves in the Microservice, and not in the App.
+- Input could be possible through the keyboard, and direct intput to the relevant field.
