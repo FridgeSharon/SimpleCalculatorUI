@@ -1,7 +1,7 @@
 <div class="container" *ngIf="!(isCalculatorActivated | async)">
   
     <h1 mat-headline>Calculator by:</h1>
-    <h1 mat-headline>Guy Sharon, heyguysha@gmail.com</h1>
+    <h1 mat-headline>{{calculatorBy}}</h1>
     <button mat-raised-button (click)="activateCalculator()">Go to calculator</button>
   
   </div>

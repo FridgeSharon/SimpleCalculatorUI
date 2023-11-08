@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 export class AppComponent {
   title = 'SimpleCalculatorUI';
   public isCalculatorActivated: Subject<boolean>;
+  public calculatorBy: string = `Guy Sharon, heyguysha@gmail.com`;
 
   constructor() {
     this.isCalculatorActivated = new Subject<boolean>();

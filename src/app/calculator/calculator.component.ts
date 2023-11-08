@@ -16,7 +16,7 @@ export class CalculatorComponent {
   public dottAdded: boolean = false;
   public shouldReset: boolean = false;
 
-  private readonly SERVER_URL: string = 'http://localhost:5146/calculate';
+  private readonly SERVER_URL: string = 'http://localhost:5146/Calculator';
 
   constructor(public http: HttpClient) {}
 
